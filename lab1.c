@@ -25,10 +25,10 @@ extern bool isEqualS8(int8_t x, int8_t y); // returns 1 if x = y, 0 if x != y
 
 int main(void) {
 	
-	uint32_t a = 4000000000;
-	uint32_t b = 3000000000;
+	uint32_t a = 4294967295;
+	uint32_t b = 4294967295;
 	
-	printf("Question 1, add64: Correct answer = %lld\n", 7000000000);
+	printf("Question 1, add64: Correct answer = %lld\n", 8589934590);
 	printf("Question 1, add64: Student answer = %lld\n\n", add64(a, b));
 	
 	uint64_t c = 9000000000;
@@ -37,26 +37,26 @@ int main(void) {
 	printf("Question 2, sub64: Correct answer = %lld\n", c - d);
 	printf("Question 2, sub64: Student answer = %lld\n\n", sub64(c, d));
 	
-	uint32_t e = 254;
-	uint32_t f = 4;
+	uint32_t e = 9;
+	uint32_t f = 3;
 	
-	printf("Question 3, minU8, test 1: Correct answer = %u\n", f);
-	printf("Question 3, minU8, test 1: Student answer = %u\n\n", minU32(e, f));
+	printf("Question 3, minU32, test 1: Correct answer = %u\n", f);
+	printf("Question 3, minU32, test 1: Student answer = %u\n\n", minU32(e, f));
 	
 	printf("Question 3, minU8, test 2: Correct answer = %u\n", f);
 	printf("Question 3, minU8, test 2: Student answer = %u\n\n", minU32(f, e));
 	
-	int8_t g = -8;
-	int8_t h = 8;
+	int8_t g = -128;
+	int8_t h = -125;
 	
-	printf("Question 4, minS16, test 1: Correct answer = %hhd\n", g);
-	printf("Question 4, minS16, test 1: Student answer = %d\n\n", minS8(g, h));
+	printf("Questin 4, minS8, test 1: Correct answer = %hhd\n", g);
+	printf("Question 4, minS8, test 1: Student answer = %d\n\n", minS8(g, h));
 	
-	printf("Question 4, minS16, test 2: Correct answer = %hhd\n", g);
-	printf("Question 4, minS16, test 2: Student answer = %hhd\n\n", minS8(h, g));
+	printf("Question 4, minS8, test 2: Correct answer = %hhd\n", g);
+	printf("Question 4, minS8, test 2: Student answer = %hhd\n\n", minS8(h, g));
 	
-	uint16_t i = 32;
-	uint16_t j = 16;
+	uint16_t i = 2;
+	uint16_t j = 1;
 	
 	printf("Question 5, isLessThanU8, test 1: Correct answer = %hd\n", 0);
 	printf("Question 5, isLessThanU8, test 1: Student answer = %hd\n\n", isLessThanU16(i, j));
@@ -64,29 +64,29 @@ int main(void) {
 	printf("Question 5, isLessThanU8, test 2: Correct answer = %hd\n", 1);
 	printf("Question 5, isLessThanU8, test 2: Student answer = %hd\n\n", isLessThanU16(j, i));
 	
-	int16_t k = -3;
-	int16_t l = 2;
+	int16_t k = 27000;
+	int16_t l = -32000;
 	
-	printf("Question 6, isLessThanS16, test 1: Correct answer = %hd\n", 1);
+	printf("Question 6, isLessThanS16, test 1: Correct answer = %hd\n", 0);
 	printf("Question 6, isLessThanS16, test 1: Student answer = %hd\n\n", isLessThanS16(k, l));
 	
-	printf("Question 6, isLessThanS16, test 2: Correct answer = %hd\n", 0);
+	printf("Question 6, isLessThanS16, test 2: Correct answer = %hd\n", 1);
 	printf("Question 6, isLessThanS16, test 2: Student answer = %hd\n\n", isLessThanS16(l, k));
 	
-	uint8_t m = 3;
-	uint8_t n = 4;
+	uint8_t m = 1;
+	uint8_t n = 7;
 	
-	printf("Question 7, shiftLeftU8: Correct answer = %hu\n", 48);
-	printf("Question 7, shiftLeftU8: Student answer = %hu\n\n", shiftLeftU8(m, n));
+	printf("Question 7, shiftLeftU8: Correct answer = %hhu\n", 128);
+	printf("Question 7, shiftLeftU8: Student answer = %hhu\n\n", shiftLeftU8(m, n));
 
-	uint16_t m_a = 8;
-	uint16_t n_a = 12;
+	uint16_t m_a = 100;
+	uint16_t n_a = 3;
 	
-	printf("Question 8, shiftU16, test 1: Correct answer = %hu\n", 32768);
+	printf("Question 8, shiftU16, test 1: Correct answer = %hu\n", 800);
 	printf("Question 8, shiftU16, test 1: Student answer = %hu\n\n", shiftU16(m_a, n_a));
 	
-	printf("Question 8, shiftU16, test 2: Correct answer = %hu\n", 2);
-	printf("Question 8, shiftU16, test 2: Student answer = %hu\n\n", shiftU16(m_a, -2));
+	printf("Question 8, shiftU16, test 2: Correct answer = %hu\n", 12);
+	printf("Question 8, shiftU16, test 2: Student answer = %hu\n\n", shiftU16(m_a, -3));
 	
 	int8_t o = -4;
 	int8_t p = 4;
@@ -100,14 +100,14 @@ int main(void) {
 	uint16_t q = 32;
 	uint16_t r = 16;
 	
-	printf("Question 10, isEqualU16, test 1: Correct answer = %hd\n", 0);
-	printf("Question 10, isEqualU16, test 1: Student answer = %hd\n\n", isEqualU16(q, r));
+	printf("Question 10, isEqualU16, test 1: Correct answer = %hu\n", 0);
+	printf("Question 10, isEqualU16, test 1: Student answer = %hu\n\n", isEqualU16(q, r));
 	
-	printf("Question 10, isEqualU16, test 2: Correct answer = %d\n", 1);
-	printf("Question 10, isEqualU16, test 2: Student answer = %d\n\n", isEqualU16(q, q));
+	printf("Question 10, isEqualU16, test 2: Correct answer = %hu\n", 1);
+	printf("Question 10, isEqualU16, test 2: Student answer = %hu\n\n", isEqualU16(q, q));
 	
-	int8_t s = 32;
-	int8_t t = 16;
+	int8_t s =-128;
+	int8_t t = 127;
 	
 	printf("Question 11, isEqualS8, test 1: Correct answer = %hhd\n", 0);
 	printf("Question 11, isEqualS8, test 1: Student answer = %hhd\n\n", isEqualS8(s, t));
