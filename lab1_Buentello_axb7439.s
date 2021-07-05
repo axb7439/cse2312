@@ -1,3 +1,5 @@
+@Antonio Buentello
+@Lab1
 .global add64
 .global	sub64
 .global minU32
@@ -13,7 +15,7 @@
 .text
 
 @ uint64_t add64(uint32_t x, uint32_t y); // returns x + y
-@	R1:R0				   
+@	R1:R0			R0			R1	   
 add64:
 	ADDS R0, R0, R1
 	MOV R1, #0
@@ -72,7 +74,8 @@ goright16:
 goleft16:
 	MOVS R0,R0, LSL R1 
 	BX LR
-	
+@int8_t shiftS8(int8_t x, int8_t p); // return x * 2^p for p = -8 .. 8
+@	     R0		   R0	     R1
 shiftS8:
 	CMP R1, #0
 	BMI goright8
